@@ -23,6 +23,13 @@ class TodoList extends React.Component {
           })
         }
         <br />
+
+        <div className="error-container">
+          {
+            this.props.errors.map(err => <p>{err}</p>)
+          }
+        </div>
+
         <TodoForm handleSubmit={this.props.handleSubmit} createTodo={this.props.createTodo} />
       </div>
     );
